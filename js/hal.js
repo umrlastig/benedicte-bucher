@@ -1,3 +1,6 @@
+//il faudra tester aussi : 
+// http://api.archives-ouvertes.fr/search/?q=*:*&fq=collCode_s:FRANCE-GRILLES&group=true&group.field=docType_s&indent=true&group.limit=20&wt=xml&sort=producedDate_tdate desc
+
 // The MIT License (MIT)
 
 // hal.js | Copyright (c) 2019 IGN
