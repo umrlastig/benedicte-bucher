@@ -53,7 +53,7 @@ var getPublications = function(halId, parent, params){
 }
 
 const publication_options = {
-  pubPV:  "&fq=popularLevel_s:1",
+  pubPV:  "&fq=popularLevel_s:(1 OR None)",
   pubASCL:"&fq=popularLevel_s:0&fq=docType_s:\"ART\"&fq=peerReviewing_s:0",
   pubACL: "&fq=popularLevel_s:0&fq=docType_s:\"ART\"&fq=peerReviewing_s:1&fq=audience_s:2",
   pubACLN:"&fq=popularLevel_s:0&fq=docType_s:\"ART\"&fq=peerReviewing_s:1&fq=audience_s:(NOT 2)",
@@ -71,7 +71,7 @@ const publication_options = {
 // based on http://production-scientifique.bnf.fr/Annexe/cadre-de-classement
 function classement(doc) 
 {
-  if (doc.popularLevel_s == 1) return 'PV';
+  if (doc.popularLevel_s == 1 || doc.popularLevel_s is None) return 'PV';
   if (doc.docType_s == 'COUV') return 'OS';
   if (doc.docType_s == 'DOUV') return 'DO';
   if (doc.docType_s == 'POSTER') return 'AFF';
