@@ -71,7 +71,7 @@ const publication_options = {
 // based on http://production-scientifique.bnf.fr/Annexe/cadre-de-classement
 function classement(doc) 
 {
-  if (doc.popularLevel_s == 1 || doc.popularLevel_s is None) return 'PV';
+  if (doc.popularLevel_s == 1) return 'PV';
   if (doc.docType_s == 'COUV') return 'OS';
   if (doc.docType_s == 'DOUV') return 'DO';
   if (doc.docType_s == 'POSTER') return 'AFF';
