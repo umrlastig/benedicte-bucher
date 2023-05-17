@@ -53,7 +53,7 @@ var getPublications = function(halId, parent, params){
 }
 
 const publication_options = {
-  pubPV:  "",
+  pubPV:  "&fq=popularLevel_s:1",
   pubASCL:"&fq=popularLevel_s:0&fq=docType_s:\"ART\"&fq=peerReviewing_s:0",
   pubACL: "&fq=popularLevel_s:0&fq=docType_s:\"ART\"&fq=peerReviewing_s:1&fq=audience_s:2",
   pubACLN:"&fq=popularLevel_s:0&fq=docType_s:\"ART\"&fq=peerReviewing_s:1&fq=audience_s:(NOT 2)",
